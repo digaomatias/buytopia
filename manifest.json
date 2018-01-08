@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+  
+    "name": "Buytopia",
+    "description": "This extension allows to put orders on cryptopia with one click.",
+    "version": "0.5",
+    "background": { "scripts": ["background.js"] },
+    "content_scripts": [
+      { "matches": ["https://www.cryptopia.co.nz/Exchange/*"], "js": ["crypto_content_script.js"] }
+    ],
+    "browser_action": {
+      "default_icon": "cryptopia.png",
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "storage"
+    ]
+  }
